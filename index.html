@@ -60,8 +60,9 @@
          
             
             -----
+          
+            `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
             
-
             # Questions
 
             -----
@@ -92,6 +93,17 @@
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom],
       });
+    </script>
+    <script src="plugin/math/math.js"></script>
+    <script>
+      Reveal.initialize({
+        math: {
+                mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+                config: 'TeX-AMS_HTML-full',
+                // pass other options into `MathJax.Hub.Config()`
+                TeX: { Macros: { RR: "{\\bf R}" } }},
+                  plugins: [ RevealMath ]
+              });
     </script>
   </body>
 </html>
